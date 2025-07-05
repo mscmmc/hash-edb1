@@ -32,6 +32,9 @@ void inserirElemento(Node* tabela[],
                      float valor);
 
 /// Buscar um elemento pelo ID
+Node* buscarElemento(Node* tabela[], int id);
+
+/// Remover um elemento pelo ID
 bool removerElemento(Node* tabela[], int id);
 
 /// Editar um elemento da tabela
