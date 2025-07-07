@@ -73,13 +73,11 @@ bool removerElemento(Node** tabela, int id) {
         anterior->next = atual->next;  ///< Pula o nó atual
       }
       delete atual;
-      std::cout << "Elemento deletado!\n";
       return true;
     }
     anterior = atual;  ///< Move os ponteiros para seguir buscando naquele índice
     atual = atual->next;
   }
-  std::cout << "ERRO: ID não encontrado\n";
   return false;
 }
 
@@ -94,10 +92,8 @@ bool editarElemento(Node** tabela,
     node->elemento.nome = novoNome;
     node->elemento.categoria = novaCategoria;
     node->elemento.valor = novoValor;
-    std::cout << "Informações atualizadas com sucesso.\n";
     return true;
   }
-  std::cout << "Elemento não encontrado\n";
   return false;  ///< Nó não encontrado
 }
 
